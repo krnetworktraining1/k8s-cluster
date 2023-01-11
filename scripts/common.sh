@@ -52,8 +52,8 @@ echo "Added Kubernetes apt repository"
 
 #Update apt package index, install kubelet, kubeadm and kubectl, and pin their version:
 sudo apt-get update -y
-sudo apt install -qq -y kubelet kubectl kubeadm >/dev/null 2>&1
-#sudo apt install -qq -y kubeadm=$VERSION kubelet=1.25.5-00 kubectl=$VERSION >/dev/null 2>&1
+#sudo apt install -qq -y kubelet kubectl kubeadm >/dev/null 2>&1
+sudo apt install -qq -y kubeadm=1.25.3-00 kubelet=1.25.3-00 kubectl=1.25.3-00 >/dev/null 2>&1
 echo "Installed kubelet kubectl kubeadm"
 
 echo 'vagrant ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
